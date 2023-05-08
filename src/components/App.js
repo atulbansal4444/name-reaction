@@ -5,6 +5,7 @@ import PubSub from "../pubsub";
 import { initialState } from "../reducers/types";
 import MessageBoard from "./MessageBoard";
 import PublishMessage from "./PublishMessage";
+import SetUsername from "./SetUsername";
 
 const pubsub = new PubSub();
 
@@ -22,6 +23,7 @@ function App() {
   return (
     <Context.Provider value={{state, dispatch, pubsub}}>
       <h2>Reaction</h2>
+      <SetUsername />
       <hr />
       <PublishMessage />
       <MessageBoard />

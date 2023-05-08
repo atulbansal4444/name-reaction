@@ -1,7 +1,9 @@
+import { SET_USERNAME } from "../actions/actions";
 import { NEW_MESSAGES } from "../actions/types";
 
 export const initialState = {
-  messages: []
+  messages: [],
+  username: 'anonymus'
 };
 
 const reducer = (
@@ -13,7 +15,12 @@ const reducer = (
       return {
         ...state,
         messages: [...state.messages, action.item]
-      }
+      };
+    case SET_USERNAME:
+      return {
+        ...state,
+        username: action.username
+      };
     default:
       return state;
   }

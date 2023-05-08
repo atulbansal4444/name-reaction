@@ -3,14 +3,15 @@ import { newMessage } from "../actions/types";
 import { useAppContext } from "./hooks";
 
 const PublishMessage = () => {
-  const { pubsub: { publish } } = useAppContext();
+  const { state: { username }, pubsub: { publish } } = useAppContext();
   const [text, setText] = useState('');
+  
   const updateText = event => {
     setText(event.target.value);
   };
 
   const publishMessage = () => {
-    publish(newMessage(text));
+    publish(newMessage({text, username}));
     setText('');
   };
 
