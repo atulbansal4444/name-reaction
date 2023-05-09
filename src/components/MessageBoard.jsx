@@ -1,4 +1,5 @@
 import React from "react";
+import CreateReaction from "./CreateReaction";
 import { useAppContext } from "./hooks";
 
 const MessageBoard = () => {
@@ -12,7 +13,8 @@ const MessageBoard = () => {
           <div key={id}>
             <h4>{new Date(timestamp).toLocaleString()}</h4>
             <p>{text}</p>
-            <h4>- { username }</h4>
+            <h4>- {username}</h4>
+            <CreateReaction />
             <hr />
           </div>
         );

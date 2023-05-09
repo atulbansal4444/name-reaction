@@ -13,7 +13,27 @@ const newMessage = ({text, username}) => {
   }
 }
 
+const REACTION_OBJECTS = [
+  {
+    type: 'REACTION_LOVE',
+    emoji: '❤️'
+  },
+  {
+    type: 'REACTION_LIKE',
+    emoji: '👍'
+  },
+  {
+    type: 'REACTION_DISLIKE',
+    emoji: '👎'
+  },
+  {
+    type: 'REACTION_LAUGH',
+    emoji: '😂'
+  } 
+];
+
 export {
   newMessage,
-  NEW_MESSAGES
+  NEW_MESSAGES,
+  REACTION_OBJECTS
 };
