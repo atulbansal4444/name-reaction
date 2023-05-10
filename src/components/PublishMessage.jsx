@@ -11,6 +11,7 @@ const PublishMessage = () => {
   };
 
   const publishMessage = () => {
+    console.log('hi');
     publish(newMessage({text, username}));
     setText('');
   };
